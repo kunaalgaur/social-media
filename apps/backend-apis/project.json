@@ -1,0 +1,24 @@
+{
+  "name": "backend-apis",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/backend-apis/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "backend-apis:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "backend-apis:build:development"
+        },
+        "production": {
+          "buildTarget": "backend-apis:build:production"
+        }
+      }
+    }
+  }
+}
